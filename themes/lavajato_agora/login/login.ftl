@@ -1,6 +1,6 @@
 <#import "template.ftl" as layout>
 
-<div class="flex flex-col h-screen items-center justify-center">
+<#--  <div class="flex flex-col h-screen items-center justify-center">  -->
 
     <@layout.registrationLayout displayMessage=!messagesPerField.existsError('username','password') displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled??; section>
         <#if section = "header">
@@ -233,4 +233,4 @@
         </a>
     </div>
 
-</div>
+<#--  </div>  -->

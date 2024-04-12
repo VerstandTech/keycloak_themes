@@ -2,7 +2,7 @@
 <#import "user-profile-commons.ftl" as userProfileCommons>
 <#import "register-commons.ftl" as registerCommons>
 
-<div class="flex flex-col min-h-screen items-center justify-center mb-0 font-Jakarta font-semibold text-base">
+<#--  <div class="flex flex-col min-h-screen items-center justify-center mb-0 font-Jakarta font-semibold text-base">  -->
     <@layout.registrationLayout displayMessage=messagesPerField.exists('global') displayRequiredFields=true displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled??; section>
         <#if section = "header">
             <h1 class="text-xl font-semibold">
@@ -224,4 +224,4 @@
             </script>
         </#if>
     </@layout.registrationLayout>
-</div>
+<#--  </div>  -->

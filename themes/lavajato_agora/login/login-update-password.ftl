@@ -1,7 +1,7 @@
 <#import "template.ftl" as layout>
 <#import "password-commons.ftl" as passwordCommons>
 
-<div class="flex flex-col min-h-screen items-center justify-center mb-0 font-Jakarta font-semibold text-base">
+<#--  <div class="flex flex-col min-h-screen items-center justify-center mb-0 font-Jakarta font-semibold text-base">  -->
     <@layout.registrationLayout displayMessage=!messagesPerField.existsError('password','password-confirm'); section>
         <#if section = "header">
             <span class="text-xl font-semibold">
@@ -156,4 +156,4 @@
             </script>
         </#if>
     </@layout.registrationLayout>
-</div>
+<#--  </div>  -->

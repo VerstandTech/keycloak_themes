@@ -1,6 +1,6 @@
 <#import "template.ftl" as layout>
 
-<div class="flex h-screen font-Jakarta">
+<#--  <div class="flex h-screen font-Jakarta">  -->
     <@layout.registrationLayout displayInfo=true displayMessage=!messagesPerField.existsError('username'); section>
         <#if section = "header">
             <div class="flex flex-col gap-4">
@@ -84,4 +84,4 @@
             </#if>
         </#if>
     </@layout.registrationLayout>
-</div>
+<#--  </div>  -->

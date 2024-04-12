@@ -98,7 +98,7 @@
             </script>
         </head>
 
-        <body>
+        <body class="flex flex-col h-screen items-center justify-center">
             <div class="flex flex-col items-center justify-center w-full">
                 <div class="mx-auto p-8 max-w-lg rounded-lg bg-gray-50 w-1/3">
                     <header class="mb-0">
