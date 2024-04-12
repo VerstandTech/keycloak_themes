@@ -1,5 +1,28 @@
 {
-  "devDependencies": {
-    "tailwindcss": "^3.4.1"
+  "name": "verstand_keycloak_themes",
+  "version": "1.0.0",
+  "description": "Verstand keycloak themes",
+  "main": ".",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i ./login.pre.css -o ./themes/lavajato_agora/login/resources/css/login.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VerstandTech/keycloak_themes.git"
+  },
+  "keywords": [
+    "verstand",
+    "keycloak",
+    "themes"
+  ],
+  "author": "Leonardo Ribeiro <leo@verstand.tech>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VerstandTech/keycloak_themes/issues"
+  },
+  "homepage": "https://github.com/VerstandTech/keycloak_themes#readme",
+  "dependencies": {
+    "tailwindcss": "^3.4.3"
   }
 }
