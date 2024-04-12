@@ -1,15 +1,26 @@
 FROM quay.io/keycloak/keycloak:latest
 
-# Definir variáveis ​​de ambiente
-ENV KEYCLOAK_ADMIN=admin
-ENV KEYCLOAK_ADMIN_PASSWORD=admin
+ARG KEYCLOAK_ADMIN
+ARG KEYCLOAK_ADMIN_PASSWORD
 
-# Expor a porta necessária
+ARG DB_VENDOR
+ARG DB_ADDR
+ARG DB_DATABASE
+ARG DB_USER
+ARG DB_PASSWORD
+
+ENV KEYCLOAK_ADMIN=${KEYCLOAK_ADMIN}
+ENV KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD}
+
+ENV DB_VENDOR=${DB_VENDOR}
+ENV DB_ADDR=${DB_ADDR}
+ENV DB_DATABASE=${DB_DATABASE}
+ENV DB_USER=${DB_USER}
+ENV DB_PASSWORD=${DB_PASSWORD}
+
+COPY ./themes /opt/keycloak/themes
+
 EXPOSE 8080
 
-# Adicionar volume para sincronizar com a pasta de temas
-#VOLUME /mnt/6E6CF9236CF8E6AD/www/keycloak/themes:/opt/keycloak/themes
-
-# Comando de inicialização
 CMD ["start-dev"]
 
